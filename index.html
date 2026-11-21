@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#162724">
+  <title>Диалог — видеособеседование</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <header><span class="brand"><i aria-hidden="true"></i>Диалог</span><span>Видеособеседования</span></header>
+  <main>
+    <div class="heading"><h1>Комната интервью</h1><span class="status" id="status" role="status">До звонка</span></div>
+    <section class="stage" aria-label="Видео собеседника">
+      <div class="empty"><div class="portrait" aria-hidden="true"><i></i></div><h2 id="placeholder">Здесь появится собеседник</h2></div>
+      <video id="remote" autoplay playsinline></video>
+      <button id="play" hidden>Включить звук собеседника</button>
+      <span class="tag">Собеседник</span>
+      <div class="preview"><span aria-hidden="true">◉</span><video id="local" autoplay muted playsinline></video><b>Вы</b></div>
+    </section>
+    <div class="controls">
+      <div class="devices">
+        <button id="mic" disabled aria-pressed="false">Выключить микрофон</button>
+        <button id="camera" disabled aria-pressed="false">Выключить камеру</button>
+      </div>
+      <button id="join">Войти в комнату ↗</button>
+      <button id="leave" hidden>Завершить звонок</button>
+    </div>
+    <p id="hint" role="status">При входе разрешите доступ к камере и микрофону. Для разговора оба участника открывают эту страницу.</p>
+  </main>
+  <script type="module" src="./src/main.ts"></script>
+</body></html>
